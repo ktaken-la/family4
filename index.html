@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>alerters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1><em> Let me introduce my family</em></H1>
+    <img id="img1" src="IMG_0701.JPG">
+    <button id="next" type="button" onclick=" nextslide()">Next</button>
+    <p id="family">Daddy</p>
+</body>
+<script>
+var image=[
+ "IMG_0701.JPG",  
+"IMG_2604.jpg",
+"IMG_2706.jpg"
+];
+var members=[
+"Dad",
+"Me",
+"Mom"
+
+];
+var i= 0;
+function nextslide() {
+document.getElementById("family").innerHTML=members[i];
+document.getElementById("img1").src=image[i];
+i++;
+}
+
+if(members==2) {
+    document.getElementById("img1").src=image[0]; 
+}
+</script>
+</html>
